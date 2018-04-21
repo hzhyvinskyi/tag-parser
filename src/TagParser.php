@@ -15,7 +15,7 @@ class TagParser implements TagParserInterface
      * @param string $tag
      * @return array
      */
-    public function process(string $tag, string $url): array
+    public function process(string $url, string $tag): array
     {
         $str = file_get_contents($url);
 
@@ -23,7 +23,7 @@ class TagParser implements TagParserInterface
             return ['Invalid URL'];
         }
 
-        // Get content inside the tag
+        // Get content from inside of the tag
         preg_match_all("#<{$tag}.*?>(.*?)<\/{$tag}>#sui", $str, $matches);
 
         if (empty($matches[1])) {
@@ -31,10 +31,5 @@ class TagParser implements TagParserInterface
         } else {
             return $matches[1];
         }
-    }
-
-    public function test()
-    {
-        // feature
     }
 }
