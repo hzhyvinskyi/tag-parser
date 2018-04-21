@@ -23,6 +23,7 @@ class TagParser implements TagParserInterface
             return ['Invalid URL'];
         }
 
+        // Get content inside the tag
         preg_match_all("#<{$tag}.*?>(.*?)<\/{$tag}>#sui", $str, $matches);
 
         if (empty($matches[1])) {
