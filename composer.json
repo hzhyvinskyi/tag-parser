@@ -1,0 +1,21 @@
+{
+    "name": "hzhyvinskyi/tag-parser",
+    "description": "Simple html tag parser",
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Roman Hzhyvinskyi",
+            "email": "hzhyvinskyi@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "hzhyvinskyi\\parser\\": "src/"
+        }
+    }
+}
