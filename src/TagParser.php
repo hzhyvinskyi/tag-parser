@@ -32,4 +32,9 @@ class TagParser implements TagParserInterface
             return $matches[1];
         }
     }
+
+    public function test()
+    {
+        // feature
+    }
 }
