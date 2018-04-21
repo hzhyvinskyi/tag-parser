@@ -15,7 +15,7 @@ class TagParser implements TagParserInterface
      * @param string $tag
      * @return array
      */
-    public function process(string $url, string $tag): array
+    public function process(string $tag, string $url): array
     {
         $str = file_get_contents($url);
 
